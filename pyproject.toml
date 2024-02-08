@@ -1,0 +1,27 @@
+[tool.poetry]
+name = "hexlet-code"
+version = "0.1.0"
+description = ""
+authors = ["Nikolay Skorokhod <mrsuperpuper016@gmail.com>"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+]
+repository = "https://github.com/NikSko0r/python-project-50.git"
+readme = "README.md"
+packages = [
+    { include = "gendiff" },
+]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+
+
+[tool.poetry.group.dev.dependencies]
+flake8 = "^7.0.0"
+
+[tool.poetry.scripts]
+gendiff = "gendiff.scripts.gendiff:main"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
