@@ -8,9 +8,14 @@ def is_key(key, dic):
     return key in dic
 
 
+def get_data_from_file(file1):
+    with open(file1, encoding='utf-8') as file1:
+        dic = json.load(file1)
+    return dic
+
+
 def generate_diff(file1, file2):
-    with open(file1, encoding='utf-8') as file1, open(file2, encoding='utf-8') as file2:
-        dic1, dic2 = json.load(file1), json.load(file2)
+    dic1, dic2 = get_data_from_file(file1), get_data_from_file(file2)
     lst = sorted({**dic1, **dic2})
     string = ''
     for i in lst:
@@ -27,6 +32,7 @@ def generate_diff(file1, file2):
                 string += f'  + {i}: {dic2[i]}\n'
     string = '{\n' + string + '}'
     print(string)
+    return string
 
 
 def gendiff():
