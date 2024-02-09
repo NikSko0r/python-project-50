@@ -8,8 +8,8 @@ def test_is_key():
         "key": "value",
     }
 
-    assert is_key("key", dic) == True
-    assert is_key("value", dic) == False
+    assert is_key("key", dic) == True  # noqa
+    assert is_key("value", dic) == False  # noqa
 
 
 def test_get_data_from_file():
