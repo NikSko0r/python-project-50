@@ -8,5 +8,9 @@
 [![test-action](https://github.com/NikSko0r/python-project-50/actions/workflows/test-action.yml/badge.svg)](https://github.com/NikSko0r/python-project-50/actions/workflows/test-action.yml)
 
 
-### asciinema generate_diff function in cli:
+### asciinema generate difference between .json files:
 [![asciicast](https://asciinema.org/a/LZC2gfOCIfyQe8PY67EgK72Vm.svg)](https://asciinema.org/a/LZC2gfOCIfyQe8PY67EgK72Vm)
+
+
+### asciinema generate difference between .yaml files:
+[![asciicast](https://asciinema.org/a/nSmoIK2IPANS5lLjpxaW08FwP.svg)](https://asciinema.org/a/nSmoIK2IPANS5lLjpxaW08FwP)
