@@ -1,6 +1,6 @@
 import argparse
 
-from gendiff.compare_files import get_diff_between_files
+from gendiff.compare_files import get_generate_diff
 
 
 def parsing_files():
@@ -10,4 +10,4 @@ def parsing_files():
     parser.add_argument('second_file')
     parser.add_argument('-f', '--format', help='set format of output')
     args = parser.parse_args()
-    get_diff_between_files(args.first_file, args.second_file)
+    get_generate_diff(args.first_file, args.second_file)

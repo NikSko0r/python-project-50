@@ -14,3 +14,6 @@
 
 ### asciinema generate difference between .yaml files:
 [![asciicast](https://asciinema.org/a/nSmoIK2IPANS5lLjpxaW08FwP.svg)](https://asciinema.org/a/nSmoIK2IPANS5lLjpxaW08FwP)
+
+### asciinema generate difference between nested files(yaml and json formats):
+[![asciicast](https://asciinema.org/a/dwv9xSroIixNW7NS0P4hxB2KI.svg)](https://asciinema.org/a/dwv9xSroIixNW7NS0P4hxB2KI)
