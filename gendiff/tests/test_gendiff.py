@@ -5,14 +5,13 @@ import pytest
 from gendiff.compare_files import (
     is_key,
     get_diff_files,
-    stylish,
-    get_value,
     get_generate_diff,
     get_data_from_file,
     get_format_file,
     get_path_to_file,
 )
 from gendiff.formaters.plain import plain
+from gendiff.formaters.stylish import stylish, get_value
 
 
 @pytest.fixture
