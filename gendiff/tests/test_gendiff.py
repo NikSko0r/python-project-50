@@ -12,6 +12,7 @@ from gendiff.compare_files import (
     get_format_file,
     get_path_to_file,
 )
+from gendiff.formaters.plain import plain
 
 
 @pytest.fixture
@@ -190,3 +191,11 @@ def test_stylish(coll):
     ) as file1:
         result = file1.read()
     assert stylish(coll) == result
+
+
+def test_plain(coll):
+    with open(
+        "gendiff/tests/fixture/plain_result.txt", "r", encoding="utf-8"
+    ) as file1:
+        result = file1.read()
+        assert plain(coll) == result

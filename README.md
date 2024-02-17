@@ -17,3 +17,6 @@
 
 ### asciinema generate difference between nested files(yaml and json formats):
 [![asciicast](https://asciinema.org/a/dwv9xSroIixNW7NS0P4hxB2KI.svg)](https://asciinema.org/a/dwv9xSroIixNW7NS0P4hxB2KI)
+
+### asciinema generate difference files(plain and stylish formater):
+[![asciicast](https://asciinema.org/a/KoznNDqILTrldnbgzlD92MpjQ.svg)](https://asciinema.org/a/KoznNDqILTrldnbgzlD92MpjQ)
