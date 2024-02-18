@@ -68,16 +68,16 @@ def get_generate_diff(file1, file2, style='stylish'):
     rows = get_diff_files(dic1, dic2)
 
     if style == 'stylish':
-        string = to_stylish(rows)
+        return to_stylish(rows)
 
     elif style == 'plain':
-        string = to_plain(rows)
+        return to_plain(rows)
 
     elif style == 'json':
-        string = generate_json(rows)
+        return generate_json(rows)
 
-    print(string)
-    return string
+    else:
+        return to_stylish(rows)
 
 
 __all__ = (
