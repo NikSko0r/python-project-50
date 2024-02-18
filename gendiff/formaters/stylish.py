@@ -1,7 +1,7 @@
 import itertools
 
 
-def stylish(answer, replacer='    ', depth=1):
+def to_stylish(answer, replacer='    ', depth=1):
 
     def inner(answer, depth):
         indent = replacer * depth
@@ -42,7 +42,7 @@ def get_value(value, depth):
     new_depth = depth + 1
     rows = []
     if isinstance(value, list):
-        return stylish(value, depth=depth)
+        return to_stylish(value, depth=depth)
     elif isinstance(value, dict):
         for key, val in value.items():
             rows.append(f'{indent}{key}: {get_value(val, new_depth)}')

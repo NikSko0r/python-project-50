@@ -1,4 +1,4 @@
-def plain(answer):
+def to_plain(answer):
 
     def inner(answer, path=''):
         rows = []

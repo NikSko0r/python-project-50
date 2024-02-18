@@ -1,8 +1,9 @@
 import json
 import yaml
 import os
-from gendiff.formaters.plain import plain
-from gendiff.formaters.stylish import stylish
+from gendiff.formaters.plain import to_plain
+from gendiff.formaters.stylish import to_stylish
+from gendiff.formaters.json import generate_json
 
 
 def is_key(key, dic):
@@ -26,16 +27,20 @@ def get_data_from_file(file_):
     format_ = get_format_file(file_)
     path = get_path_to_file(file_)
     with open(path, encoding='utf-8') as f:
+
         if format_ in lst_format:
             dic = yaml.full_load(f)
+
         else:
             dic = json.load(f)
+
     return dic
 
 
 def get_diff_files(dic1, dic2):
     answer = []
     keys = {**dic1, **dic2}
+
     for key in sorted(keys):
         if not is_key(key, dic2):
             result = {'key': key, 'status': 'removed', 'value': dic1[key]}
@@ -54,16 +59,23 @@ def get_diff_files(dic1, dic2):
                 'key': key, 'status': 'changed', 'old_value': dic1[key], 'new_value': dic2[key]}
 
         answer.append(result)
+
     return answer
 
 
 def get_generate_diff(file1, file2, style='stylish'):
     dic1, dic2 = get_data_from_file(file1), get_data_from_file(file2)
     rows = get_diff_files(dic1, dic2)
+
     if style == 'stylish':
-        string = stylish(rows)
+        string = to_stylish(rows)
+
     elif style == 'plain':
-        string = plain(rows)
+        string = to_plain(rows)
+
+    elif style == 'json':
+        string = generate_json(rows)
+
     print(string)
     return string
 

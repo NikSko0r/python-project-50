@@ -1,10 +1,10 @@
 [tool.poetry]
 name = "hexlet-code"
 version = "0.1.0"
-description = ""
+description = "hexlet project, diff between 2 files (formats yaml and json)"
 authors = ["Nikolay Skorokhod <mrsuperpuper016@gmail.com>"]
 classifiers = [
-    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.11",
 ]
 repository = "https://github.com/NikSko0r/python-project-50.git"
 readme = "README.md"
@@ -23,9 +23,9 @@ pytest = "^8.0.0"
 pytest-cov = "^4.1.0"
 black = "24.1.1"
 
-[tool.poetry.scripts]
-gendiff = "gendiff.scripts.gendiff:main"
-
 [build-system]
 requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.scripts]
+gendiff = "gendiff.scripts.gendiff:main"

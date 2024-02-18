@@ -10,8 +10,9 @@ from gendiff.compare_files import (
     get_format_file,
     get_path_to_file,
 )
-from gendiff.formaters.plain import plain
-from gendiff.formaters.stylish import stylish, get_value
+from gendiff.formaters.plain import to_plain
+from gendiff.formaters.stylish import to_stylish, get_value
+from gendiff.formaters.json import generate_json
 
 
 @pytest.fixture
@@ -189,7 +190,7 @@ def test_stylish(coll):
         "gendiff/tests/fixture/nested_result.txt", "r", encoding="utf-8"
     ) as file1:
         result = file1.read()
-    assert stylish(coll) == result
+    assert to_stylish(coll) == result
 
 
 def test_plain(coll):
@@ -197,4 +198,12 @@ def test_plain(coll):
         "gendiff/tests/fixture/plain_result.txt", "r", encoding="utf-8"
     ) as file1:
         result = file1.read()
-        assert plain(coll) == result
+        assert to_plain(coll) == result
+
+
+def test_generate_json(coll):
+    with open(
+        "gendiff/tests/fixture/json_result.txt", "r", encoding="utf-8"
+    ) as file1:
+        result = file1.read()
+        assert generate_json(coll) == result

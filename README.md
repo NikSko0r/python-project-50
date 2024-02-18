@@ -1,3 +1,20 @@
+### About gendiff utilita
+This is a hexlet educational project, which is a utility for comparing two files and outputting the comparison result to the console.
+It supports .json, .yaml, .yml formats of config files.
+
+### Installation:
+1. git clone for repository
+2. command cd python-project-50/ (working directory)
+3. make package-install (console)
+
+### Usage:
+Your terminal:
+gendiff file_1 file_2 (enter) [--option]
+
+available options:
+-h, --help : information about utility.
+-f --format : format of files difference output. Available formats: 'stylish' (default), 'plane', 'json'.
+
 ### Hexlet tests and linter status:
 [![Actions Status](https://github.com/NikSko0r/python-project-50/actions/workflows/hexlet-check.yml/badge.svg)](https://github.com/NikSko0r/python-project-50/actions)
 
@@ -20,3 +37,6 @@
 
 ### asciinema generate difference files(plain and stylish formater):
 [![asciicast](https://asciinema.org/a/KoznNDqILTrldnbgzlD92MpjQ.svg)](https://asciinema.org/a/KoznNDqILTrldnbgzlD92MpjQ)
+
+### asciinema generate difference files(json formater):
+[![asciicast](https://asciinema.org/a/EwsRC4RbpYc7JWaOlc5rEdyPF.svg)](https://asciinema.org/a/EwsRC4RbpYc7JWaOlc5rEdyPF)
